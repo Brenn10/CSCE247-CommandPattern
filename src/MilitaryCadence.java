@@ -37,7 +37,7 @@ public class MilitaryCadence {
         System.out.println(port);
         while(port.hasNext()) {
             try {
-                TimeUnit.MILLISECONDS.sleep(100);
+                TimeUnit.SECONDS.sleep(3);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
