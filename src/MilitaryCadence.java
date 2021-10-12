@@ -34,10 +34,10 @@ public class MilitaryCadence {
         Iterator<String> port = song.iterator();
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println(port);
+        System.out.println(port.next());
         while(port.hasNext()) {
             try {
-                TimeUnit.SECONDS.sleep(3);
+                TimeUnit.MILLISECONDS.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
