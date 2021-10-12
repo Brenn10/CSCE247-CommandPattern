@@ -13,15 +13,19 @@ public class MilitaryCadence {
     }
     
     public void singIDontKnow() {
+        List<String> IDontKnow = fileReader("idontknow.txt");
+        // helper function for sing
 
     }
 
     public void singEverywhereWeGo() {
-
+        List<String> everywhereWeGo = fileReader("everywhere.txt");
+        // helper function for sing
     }
 
     public void singInArmy() {
-        
+        List<String> InArmy = fileReader("inarmy.txt");
+        // helper function for sing
     }
     /** 
      * @author Trey Sturman
