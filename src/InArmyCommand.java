@@ -1,10 +1,13 @@
 package src;
 
 public class InArmyCommand implements Command {
-    public InArmyCommand(MilitaryCadence militaryCadence) {
-        
+    private MilitaryCadence cadence;
+
+    public InArmyCommand(MilitaryCadence cadence) {
+        this.cadence = cadence;
     }
+
     public void execute() {
-        // TODO: implement
+        cadence.singInArmy();
     }
 }
