@@ -12,6 +12,10 @@ public class InputHandler {
     }
 
     public boolean playCadence(int num) {
+        if(num < commands.size()-1) {
+            commands.get(num).execute();
+            return true;
+        }
         return false;
     }
 
