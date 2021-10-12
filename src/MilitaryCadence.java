@@ -27,11 +27,11 @@ private ArrayList <String> fileasString;
      * reads a file from the specified location and returns it as a string
      * @return file as a string
      */ 
-    private void fileReader(String fileName) {
+    /*private void fileReader(String fileName) {
         File file = new File(fileName);
         Scanner fileScanner = new Scanner(file);
         while (fileScanner.hasNextLine()) {
             fileasString.add(fileScanner.nextLine());
         }
-    }
+    }*/
 }
