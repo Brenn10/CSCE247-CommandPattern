@@ -1,24 +1,20 @@
 package src;
 /**
- * IDontKnowCommand is a type of Command
+ * IDontKnowCommand is a type of Command.
  * @author Brennan Cain
  */
 public class IDontKnowCommand implements Command {
     private MilitaryCadence cadence; // MilitaryCadence is required for the execute method
 
     /**
-     * constructor for the IDontKnowCommand 
+     * Constructor for the IDontKnowCommand.
      * @param cadence we use this to execute the IDontKnowCommmand 
-     * @author Brennan Cain
      */
-    public IDontKnowCommand(MilitaryCadence militaryCadence) {
-        this.cadence = militaryCadence;
+    public IDontKnowCommand(MilitaryCadence cadence) {
+        this.cadence = cadence;
     }
     /**
-     * excute method that is required for all
-     * children of Command
-     * uses the candence to call the write song
-     * @author Brennan Cain
+     * Execute I dont know command.
      */
     public void execute() {
         cadence.singIDontKnow();

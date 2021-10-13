@@ -1,24 +1,20 @@
 package src;
 /**
- * EverywhereCommand is a type of Command
- * @author Brennan Cain
+ * EverywhereCommand is a type of Command.
+ * @author Brennan Cain.
  */
 public class EverywhereCommand implements Command{
-    private MilitaryCadence cadence; // MilitaryCadence is required for the execute method
+    private MilitaryCadence cadence;
 
     /**
-     * constructor for the EverywhereCommand 
-     * @param cadence we use this to excute EverywhereCommand
-     * @author Brennan Cain
+     * Constructor for the EverywhereCommand.
+     * @param cadence we use this to excute EverywhereCommand.
      */
     public EverywhereCommand(MilitaryCadence cadence) {
         this.cadence = cadence;
     }
     /**
-     * excute method that is required for all
-     * children of Command
-     * uses the candence to call the write song
-     * @author Brennan Cain
+     * Execute everywhere cadence.
      */
     public void execute() {
         cadence.singEverywhereWeGo();

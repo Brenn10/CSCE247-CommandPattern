@@ -3,56 +3,60 @@ package src;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
-// Trey and Ian's part
-/**Author Ian McDevitt
- * constructor for Military Cadence
+/**
+ * Constructor for Military Cadence.
+ * @author Ian and Trey
  */
 public class MilitaryCadence {
-    public MilitaryCadence() {
 
-    }
     /**
-     * makes new array list handles file name for song "sing I Dont Know"
-     * @param IDontKnow is a new array list that holds the song
+     * Default constructor for Military Cadence.
+     */
+    public MilitaryCadence() {}
+
+    /**
+     * Sings i dont know.
      */
     public void singIDontKnow() {
-        List<String> IDontKnow = fileReader("idontknow.txt");
+        List<String> iDontKnow = fileReader("idontknow.txt");
         // helper function for sing
-        sing(IDontKnow);
+        sing(iDontKnow);
     }
-    /**
-     * makes new array list handles file name for song "sing every where we go"
-     * @param everyWhereWeGo is a new array list that holds the song
+
+    /** 
+     * Sings everywhere we go.
      */
     public void singEverywhereWeGo() {
         List<String> everywhereWeGo = fileReader("everywhere.txt");
         // helper function for sing
         sing(everywhereWeGo);
     }
-    /**
-     * makes new array list handles file name for song "sing in Army"
-     * @param InArmy is a new array list that holds the song
+    
+    /** 
+     * Sings in army song.
      */
     public void singInArmy() {
-        List<String> InArmy = fileReader("inarmy.txt");
+        List<String> inArmy = fileReader("inarmy.txt");
         // helper function for sing
-        sing(InArmy);
+        sing(inArmy);
     }
-/**Author Ian McDevitt created sing helper method
- * @param song handles the song given and displays throught the arraylist by a controlled speed
- */
+    
+    /** 
+     * Prints list one line at a time with a delay.
+     * @param song song broken up into lines.
+     */
     public void sing(List<String> song) {
         Iterator<String> port = song.iterator();
         System.out.print("\033[H\033[2J");
         System.out.flush();
         System.out.println(port.next());
-        while(port.hasNext()) {
+        while (port.hasNext()) {
             try {
-                TimeUnit.MILLISECONDS.sleep(100); // We realize that this is fast, but we left it as directed in the assignment -Ian
+                TimeUnit.MILLISECONDS.sleep(100); // very fast, but leaving per instruction
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -61,10 +65,11 @@ public class MilitaryCadence {
             System.out.println(port.next());
         }
     }
+
     /** 
-     * @author Trey Sturman
-     * reads a file from the specified location and returns it as a string
-     * @return file as a string
+     * Reads a file to a list of strings, broken up by line.
+     * @param fileName name of file to be read.
+     * @return List containing lines of file.
      */ 
     private List<String> fileReader(String fileName) {
         Scanner fileScanner;

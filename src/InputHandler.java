@@ -1,18 +1,15 @@
 package src;
 import java.util.ArrayList;
 /**
- * This class handles the input from the user
+ * This class handles the input from the user.
  * @author Stella Garcia
  */
 public class InputHandler {
     private ArrayList<Command> commands; // the different types of commands will be stored her
 
     /**
-     * Constructor for InputHandler 
-     * initialzied the ArrayList with the indeces
-     *  specified in the assignment description
+     * Initialzes the ArrayList with the indices specified in the assignment description.
      * @param cadence how to execute each command is in the MilitaryCadence class
-     * @author Stella Garcia
      */
     public InputHandler(MilitaryCadence cadence) {
         commands = new ArrayList<Command>();
@@ -22,13 +19,12 @@ public class InputHandler {
     }
 
     /**
-     * playCandence calls the correct Command's execute method
-     * @param num the index number of the commands ArrayList that we want to play
-     * @return boolean true if it is run, false otherwise
-     * @author Stella Garcia 
+     * Calls the correct Command's execute method.
+     * @param num the index number of the commands ArrayList that we want to play.
+     * @return true if cadence is available, false otherwise.
      */
     public boolean playCadence(int num) {
-        if(num <= commands.size()) {
+        if (num <= commands.size()) {
             commands.get(num).execute();
             return true;
         }

@@ -2,6 +2,9 @@ package src;
 
 import java.util.Scanner;
 
+/**
+ * This class is the driver for the MilitaryCadence class.
+ */
 public class MilitaryDriver {
     private Scanner reader;
 
@@ -20,13 +23,14 @@ public class MilitaryDriver {
             String input = reader.nextLine().trim();
             
 
-            if (input.equals("q"))
+            if (input.equals("q")) {
                 break;
+            }
 
             try {
                 int num = Integer.parseInt(input) - 1;
                 inHandler.playCadence(num);
-            } catch(Exception e){
+            } catch (Exception e){
                 System.out.println("Invald input");
             }
 
